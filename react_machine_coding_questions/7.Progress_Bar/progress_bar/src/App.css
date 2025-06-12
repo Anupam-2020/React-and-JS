@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.center_div {
+  left: 50%;
+  width: 70vw;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transform: translateX(-50%);
+  top: 20vh;
+  height: 4vh;
+}
+
+.span_child {
+  background-color: rgb(15, 17, 17);
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+}
