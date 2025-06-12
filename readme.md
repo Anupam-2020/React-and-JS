@@ -1,0 +1,1 @@
+This repository contains theory questions, and projects on js, react and next js.
