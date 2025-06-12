@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"></link>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h2>Employee Database Management</h2>
+        <button class="add-employee">Add Employee</button>
+    </header>
+    <main>
+        <nav class="content-header">
+            <div class="content-body-head">
+                <h2>Employee List</h2>
+                <hr>
+            </div>
+            <div>
+                <h2>Employee Details</h2>
+                <hr>
+            </div>
+        </nav>
+        <section class="content-body">
+            <aside class="employee-list">
+            </aside>
+            <aside class="employee-desc">
+                <h2 id="name"></h2>
+                <p id="salary"></p>
+                <p id="address"></p>
+            </aside>
+        </section>
+    </main>
+    <section id="modal-popup">
+        <form class="employee-form">
+            <div>
+                <h4>Employee Name</h4>
+                <input id="name-input" placeholder="name" type="text" required/>
+            </div>
+            <div>
+                <h4>Employee Salary</h4>
+                <input id="salary-input" placeholder="Salary" type="text" required/>
+            </div>
+            <div>
+                <h4>Employee Address</h4>
+                <input id="address-input" placeholder="Address" type="text" required/>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
