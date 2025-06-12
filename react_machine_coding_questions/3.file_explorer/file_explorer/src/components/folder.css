@@ -1,0 +1,11 @@
+.folder_parent {
+    padding-left: 20px;
+    /* background-color: rgb(175, 187, 183); */
+}
+
+.folder {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+}
