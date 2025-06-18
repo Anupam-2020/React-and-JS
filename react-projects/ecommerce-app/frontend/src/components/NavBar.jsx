@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { assets } from '../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
+import { ShopContext } from '../context/ShopContext';
 
 const NavBar = () => {
     const [visible, setVisible] = React.useState(false);
+    const {setShowSearch, showSearch} = useContext(ShopContext);
   return (
     <div className='flex justify-between items-center py-4 font-medium'>
         <Link to='/'><img src={assets.logo} alt="Logo" className='w-36'/></Link>
@@ -26,7 +28,7 @@ const NavBar = () => {
             </NavLink>
         </ul>
         <div className='flex items-center gap-6'>
-            <img src={assets.search_icon} className='w-6 h-6' alt=''/>
+            <img onClick={() => setShowSearch(!showSearch)} src={assets.search_icon} className='w-6 h-6 cursor-pointer' alt=''/>
             <div className='group relative'>
                 <img src={assets.profile_icon} className='w-5 cursor-pointer' alt=''/>
                 <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
@@ -43,6 +45,7 @@ const NavBar = () => {
             </Link>
             <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden'/>
         </div>
+
         {/* Mobile Menu */}
         <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600'>
