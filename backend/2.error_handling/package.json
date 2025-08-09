@@ -1,0 +1,16 @@
+{
+  "name": "2.error_handling",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "error.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon error.js"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

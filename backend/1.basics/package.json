@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "This is 1st project on nodejs",
+  "license": "ISC",
+  "author": "Anupam Anand",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon arguments.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.1.0",
+    "minimist": "^1.2.8",
+    "nodemon": "^3.1.10",
+    "progress": "^2.0.3",
+    "readline": "^1.3.0"
+  }
+}
