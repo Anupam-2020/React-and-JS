@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const validateToken = require('../middleware/validateTokenHandler');
 const {getContact, createContact, updateContact, deleteContact, getSingleContact} = require('../controllers/contactController');
 
 // M-1..................................................................................
@@ -10,6 +11,7 @@ const {getContact, createContact, updateContact, deleteContact, getSingleContact
 // router.route("/:id").get(getSingleContact)
 
 // M-2(Shortcut)..................................................................................
+router.use(validateToken);
 router.route('/').get(getContact).post(createContact);
 router.route('/:id').get(getSingleContact).put(updateContact).delete(deleteContact);
 
